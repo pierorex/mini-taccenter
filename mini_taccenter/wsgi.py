@@ -1,5 +1,5 @@
 """
-WSGI config for minimalist_taccenter project.
+WSGI config for mini_taccenter project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -8,7 +8,7 @@ https://docs.djangoproject.com/en/1.7/howto/deployment/wsgi/
 """
 
 import os
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "minimalist_taccenter.settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "mini_taccenter.settings")
 
 
 from django.core.wsgi import get_wsgi_application

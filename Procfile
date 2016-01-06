@@ -1,1 +1,1 @@
-web: gunicorn minimalist_taccenter.wsgi --log-file -
+web: gunicorn mini_taccenter.wsgi --log-file -

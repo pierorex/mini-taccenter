@@ -1,5 +1,5 @@
 """
-Django settings for minimalist_taccenter project.
+Django settings for mini_taccenter project.
 
 For more information on this file, see
 https://docs.djangoproject.com/en/1.7/topics/settings/
@@ -50,9 +50,9 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'minimalist_taccenter.urls'
+ROOT_URLCONF = 'mini_taccenter.urls'
 
-WSGI_APPLICATION = 'minimalist_taccenter.wsgi.application'
+WSGI_APPLICATION = 'mini_taccenter.wsgi.application'
 
 
 # Database
