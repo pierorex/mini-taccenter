@@ -1,0 +1,2 @@
+configure Procfile
+install buildpack for python/django
