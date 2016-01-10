@@ -18,3 +18,12 @@ class AgentStatusView(APIView):
             })
         
         return Response(data=status_dict, status=status.HTTP_200_OK)
+
+
+class AgentView(APIView):
+    
+    def get(self, query_dict):
+        username = query_dict.GET['username']
+        return Response(data={'username': username, 
+                               'tmp_ext': random.randint(1,1000)},
+                        status=status.HTTP_200_OK)
