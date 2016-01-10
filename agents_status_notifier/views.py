@@ -25,10 +25,18 @@ class AgentStatusView(APIView):
         agent_ext = request.data.get('agent_ext', None)
         agent_name = request.data.get('agent', None)
         
-        if not (agent_ext and agent_status and agent_name and
-                status in ['paused', 'available', 'in-call', 'ringing',
-                           'categorizing', 'pause_request']):
-            return Response(data={'error': 'Missing something.'},
+        if not agent_ext:
+            return Response(data={'error': 'Missing agent_ext.'},
+                            status=status.HTTP_400_BAD_REQUEST)
+        if not agent_status:
+            return Response(data={'error': 'Missing status.'},
+                            status=status.HTTP_400_BAD_REQUEST)
+        if not agent_name:
+            return Response(data={'error': 'Missing agent.'},
+                            status=status.HTTP_400_BAD_REQUEST)
+        if not status in ['paused', 'available', 'in-call', 'ringing', 
+                          'categorizing', 'pause_request']:
+            return Response(data={'error': 'Bad status.'},
                             status=status.HTTP_400_BAD_REQUEST)
         return Response(data={}, status=status.HTTP_200_OK)
 
