@@ -3,7 +3,7 @@ FormEncode==1.2.6
 anyjson==0.3.3
 argparse==1.2.1
 django-cors-headers==1.1.0
-djangorestframework==3.3.2
+djangorestframework==3.11.2
 gunicorn==19.4.5
 oauth==1.0.1
 python-dateutil==1.5
